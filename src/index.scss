@@ -1,0 +1,35 @@
+@import 'styles/variables';
+@import 'styles/mixins';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include font-w-main;
+  background-color: $color-bg;
+  color: $color-white;
+  font-family: $font-main;
+}
+
+a,
+button {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 0;
+  border-width: 0;
+  padding: 0;
+}

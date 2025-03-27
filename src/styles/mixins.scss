@@ -1,0 +1,9 @@
+@use 'variables';
+
+@mixin font-w-main {
+  font-weight: 700;
+}
+
+@mixin font-w-bold {
+  font-weight: 900;
+}

@@ -1,0 +1,82 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.header {
+  background-color: $color-black;
+
+  &__container {
+    max-width: 1128px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  &__logo {
+    width: 104px;
+    height: 35px;
+    display: block;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      gap: 60px;
+    }
+
+    &-link {
+      font-size: $font-size-md; // Используй переменную для размера шрифта
+      text-decoration: none;
+      color: $color-white; // Цвет по умолчанию
+
+      // Градиент для текста
+      background-image: linear-gradient(
+        to right,
+        $color-white,
+        $color-white 33.33333%,
+        $color-secondary 66.66666%,
+        $color-primary
+      );
+      background-size: 300% 100%;
+      background-position: left 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: background-position 0.3s ease-in-out;
+
+      // Эффект при наведении и активации
+      &:hover,
+      &:active {
+        background-position: right 100%;
+      }
+    }
+
+    &-button {
+      width: 24px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      transition: 0.3s;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    &-icon--hover {
+      z-index: 0;
+    }
+
+    &-icon:hover {
+      opacity: 0;
+    }
+  }
+}
