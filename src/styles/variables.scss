@@ -4,15 +4,22 @@ $color-primary: #ff70d9;
 $color-secondary: #ebff00;
 $color-bg: #304571;
 
-$font-size-sm: 14px;
-$font-size-md: 18px;
-$font-size-lg-small: 20px;
-$font-size-lg: 22px;
-$font-size-lg-big: 26px;
-$font-size-xl: 32px;
-$font-size-xl-big: 46px;
-$font-size-xxl: 72px;
-$font-size-xxl-big: 74px;
+$font-size-xs: 14px; 
+$font-size-sm: 18px; 
+$font-size-md: 20px; 
+$font-size-lg: 22px; 
+$font-size-xl: 26px;  
+$font-size-2xl: 32px;  
+$font-size-3xl: 46px;  
+$font-size-4xl: 72px;  
+$font-size-5xl: 74px;
+
+// --- Tablet ---
+$font-size-sm-tab: 16px;
+$font-size-lg-tab: 22px;
+$font-size-xl-tab: 24px;
+$font-size-3xl-tab: 40px;
+$font-size-2xl-tab: 48px;
 
 $font-w-bold: 900;
 $font-w-semibold: 800; 

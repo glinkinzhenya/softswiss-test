@@ -15,20 +15,35 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
   display: flex;
   justify-content: center;
 
+   @include respond-to-desktop {
+       height: 420px;
+    }
+
   &__container {
-    max-width: 1128px;
+     max-width: 1148px;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
+  &__image-container {
+    @include respond-to-desktop {
+      margin-right: -120px;
+    }
+  }
+
   &__heading {
     font-weight: $font-w-semibold;
-    font-size: $font-size-xxl;
+    font-size: $font-size-4xl;
     margin-bottom: 22px;
     line-height: 100%;
+
+    @include respond-to-desktop {
+      font-size: $font-size-2xl-tab;
+      width: 70%;
+    }
 
     &--accent {
       color: $color-primary;
@@ -37,8 +52,12 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
 
   &__text {
     font-weight: $font-w-semibold;
-    font-size: $font-size-xl;
+    font-size: $font-size-2xl;
     margin-bottom: 22px;
+
+    @include respond-to-desktop {
+      font-size: $font-size-lg-tab;
+    }
 
     &--accent {
       color: $color-secondary;

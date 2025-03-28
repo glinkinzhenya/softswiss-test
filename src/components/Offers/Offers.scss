@@ -3,14 +3,22 @@
 
 .offers {
   margin: 60px 0;
-  max-width: 1128px;
-  padding: 0 20px;
+  max-width: 1148px;
+  padding: 0 30px;
   margin-left: auto;
   margin-right: auto;
 
+  @include respond-to-desktop {
+    margin: 55px 0;
+  }
+
   &__title {
     font-weight: $font-w-semibold;
-    font-size: $font-size-xl;
+    font-size: $font-size-2xl;
+
+    @include respond-to-desktop {
+      font-size: $font-size-xl-tab;
+    }
   }
 
   &__list {
@@ -19,22 +27,36 @@
     gap: 40px;
     margin-bottom: 62px;
     margin-top: 40px;
+
+    @include respond-to-desktop {
+      margin-top: 30px;
+      gap: 30px;
+    }
   }
 
   &__list > :nth-child(3n + 1) {
     grid-column: 1 / -1;
+
+    @include respond-to-desktop {
+      grid-column: auto;
+    }
   }
 
   &__description {
     margin-top: 17px;
     font-weight: $font-w-main;
-    font-size: $font-size-lg-small;
+    font-size: $font-size-md;
     color: rgba(255, 255, 255, 0.6);
 
     max-height: 96px;
     overflow: hidden;
     position: relative;
     transition: max-height 0.3s ease;
+
+    @include respond-to-desktop {
+      margin-top: 13px;
+      font-size: $font-size-sm-tab;
+    }
   }
 
   &__checkbox {
@@ -54,11 +76,16 @@
     margin-top: 10px;
     color: $color-secondary;
     font-weight: $font-w-semibold;
-    font-size: $font-size-lg-small;
+    font-size: $font-size-md;
     cursor: pointer;
 
     &::after {
       content: 'Read more';
+    }
+
+    @include respond-to-desktop {
+      margin-top: 20px;
+      font-size: $font-size-sm-tab;
     }
   }
 }

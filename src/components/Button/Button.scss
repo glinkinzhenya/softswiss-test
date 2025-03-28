@@ -24,6 +24,12 @@
     border: 2px solid $color-secondary;
     color: $color-secondary;
 
+    @include respond-to-desktop {
+      width: 161px;
+      height: 33px;
+      font-size: $font-size-sm-tab;
+    }
+
     &:hover {
       background-color: transparent;
       border: 2px solid rgba($color-secondary, 0.6);

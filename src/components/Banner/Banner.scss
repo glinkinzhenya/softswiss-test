@@ -5,34 +5,58 @@
   border-radius: 10px;
   width: 100%;
   background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 
   &--big {
     padding: 35px;
+
+    @include respond-to-desktop {
+      padding: 26px;
+      height: 370px;
+    }
   }
 
   &--small {
     padding: 50px 35px;
+
+    @include respond-to-desktop {
+      padding: 26px;
+    }
   }
 
   &__title {
     font-weight: $font-w-semibold;
-    width: 60%;
+    width: 80%;
     line-height: 100%;
     margin-bottom: 22px;
 
     &--big {
-      font-size: $font-size-xxl-big;
+      font-size: $font-size-5xl;
+
+      @include respond-to-desktop {
+        font-size: $font-size-3xl-tab;
+      }
     }
     &--small {
-      font-size: $font-size-xl-big;
+      font-size: $font-size-3xl;
+      @include respond-to-desktop {
+        font-size: $font-size-3xl-tab;
+      }
     }
   }
 
   &__description {
     font-weight: $font-w-semibold;
-    font-size: $font-size-lg-big;
+    font-size: $font-size-xl;
     margin-bottom: 22px;
+
+       @include respond-to-desktop {
+        font-size: $font-size-sm-tab;
+      }
   }
 }

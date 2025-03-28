@@ -1,12 +1,19 @@
 @use 'variables';
 
-// @mixin font-w-bold {
-//   font-weight: 900;
-// }
-// @mixin font-w-semibold {
-//   font-weight: 800;
-// }
+@mixin respond-to-desktop {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
 
-// @mixin font-w-main {
-//   font-weight: 700;
-// }
+@mixin respond-to-tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin respond-to-mobile {
+  @media (max-width: 350px) {
+    @content;
+  }
+}

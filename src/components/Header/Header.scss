@@ -5,14 +5,14 @@
   background-color: $color-black;
 
   &__container {
-    max-width: 1128px;
+     max-width: 1148px;
     height: 80px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 30px;
   }
 
   &__logo {
@@ -28,7 +28,7 @@
     }
 
     &-link {
-      font-size: $font-size-md;
+      font-size: $font-size-sm;
       text-decoration: none;
       color: $color-white;
 
