@@ -1,0 +1,18 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.btn {
+  width: 190px;
+  height: 54px;
+  border-radius: 100px;
+  background-color: $color-secondary;
+  color: $color-black;
+  font-weight: $font-w-main;
+  font-size: $font-size-lg;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    background: rgba($color-secondary, 0.6);
+  }
+}

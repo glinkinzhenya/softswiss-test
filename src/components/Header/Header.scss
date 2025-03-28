@@ -28,11 +28,10 @@
     }
 
     &-link {
-      font-size: $font-size-md; // Используй переменную для размера шрифта
+      font-size: $font-size-md;
       text-decoration: none;
-      color: $color-white; // Цвет по умолчанию
+      color: $color-white;
 
-      // Градиент для текста
       background-image: linear-gradient(
         to right,
         $color-white,
@@ -46,7 +45,6 @@
       -webkit-text-fill-color: transparent;
       transition: background-position 0.3s ease-in-out;
 
-      // Эффект при наведении и активации
       &:hover,
       &:active {
         background-position: right 100%;
