@@ -1,0 +1,64 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.offers {
+  margin: 60px 0;
+  max-width: 1128px;
+  padding: 0 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    font-weight: $font-w-semibold;
+    font-size: $font-size-xl;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 62px;
+    margin-top: 40px;
+  }
+
+  &__list > :nth-child(3n + 1) {
+    grid-column: 1 / -1;
+  }
+
+  &__description {
+    margin-top: 17px;
+    font-weight: $font-w-main;
+    font-size: $font-size-lg-small;
+    color: rgba(255, 255, 255, 0.6);
+
+    max-height: 96px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease;
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked ~ .offers__description {
+      max-height: none;
+    }
+
+    &:checked ~ .offers__btn::after {
+      content: 'Read less';
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: $color-secondary;
+    font-weight: $font-w-semibold;
+    font-size: $font-size-lg-small;
+    cursor: pointer;
+
+    &::after {
+      content: 'Read more';
+    }
+  }
+}

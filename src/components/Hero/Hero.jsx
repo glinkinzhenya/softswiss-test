@@ -1,7 +1,6 @@
 import earthImage from '../../assets/earth.webp';
 import earthImage2x from '../../assets/earth@2x.webp';
 import { Button } from '../Button/Button';
-// import { Button } from '../Button/Button';
 import './Hero.scss';
 
 export const Hero = () => {
@@ -15,7 +14,7 @@ export const Hero = () => {
           <p className='hero__text'>
             Where the possibilities are <span className='hero__text--accent'>endless!</span>
           </p>
-          <Button />
+          <Button link={'/'} />
         </div>
         <div className='hero__image-container'>
           <img

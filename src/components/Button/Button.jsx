@@ -1,7 +1,11 @@
 import React from 'react';
 import './Button.scss';
 
-export const Button = () => {
+export const Button = ({link, type}) => {
 
-  return <button className='btn'>Learn more</button>;
+  return (
+    <a href={link} target='blank' className={`btn ${type ==='transparent' ? 'btn--transparent' : ''}`}>
+      Learn more
+    </a>
+  );
 };

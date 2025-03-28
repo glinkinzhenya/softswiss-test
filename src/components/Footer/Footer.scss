@@ -1,43 +1,30 @@
-@import '../../styles/mixins';
 @import '../../styles/variables';
 
-.app-footer {
+.footer {
   background-color: $color-black;
   text-align: center;
-  margin-top: 5rem;
-
-  @include respond-to(desktop) {
-    margin-top: 6rem;
-  }
+  height: 127px;
 
   &__container {
-    padding: 2rem;
-
-    @include respond-to(tablet) {
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
-
-    @include respond-to(desktop) {
-      @include content-limiter;
-    }
+    padding: 20px;
   }
 
   &__icon-container {
-    width: 8rem;
+    width: 80px;
+    height: auto;
     margin: 0 auto;
+    margin-top: -18px;
   }
 
   &__icon {
-    @include responsive-image;
-    margin-top: -2rem; //corrects the icon's position according to the design
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   &__heading {
-    margin: 0;
-    font-size: 1.8rem;
-    line-height: 1.55;
-    @include font-w-bold;
+    font-size: $font-size-md;
+    font-weight: $font-w-semibold;
     color: $color-secondary;
   }
 }
