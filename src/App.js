@@ -1,15 +1,11 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
-import MainLayout from './layouts/MainLayout'
-import AppRoutes from './routes/AppRoutes'
+import { AppLayout } from './pages/AppLayout/AppLayout';
+import { Home } from './pages/Home/Home';
 
 function App() {
   return (
-    <BrowserRouter>
-      <MainLayout>
-        <AppRoutes />
-      </MainLayout>
-    </BrowserRouter>
+    <AppLayout>
+      <Home />
+    </AppLayout>
   )
 }
 
