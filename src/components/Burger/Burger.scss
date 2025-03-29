@@ -1,0 +1,107 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.burger {
+  display: none;
+
+  &__menu {
+    display: none;
+  }
+
+  @include respond-to-tablet {
+    display: block;
+    position: relative;
+    height: 16px;
+    width: 22px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      bottom: -10px;
+      left: -10px;
+      right: -10px;
+    }
+
+    &__menu {
+      display: block;
+      position: fixed;
+      top: 48px;
+      left: 0;
+      width: 100%;
+      height: 0vh;
+      background-color: rgba($color-black, 0.9);
+      transition: 0.5s;
+
+      &-active {
+        height: 200px;
+      }
+
+      > nav {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        pointer-events: none;
+      }
+
+      &-list {
+        font-size: $font-size-sm-tab;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        opacity: 0;
+        transition: 0.5s;
+        pointer-events: none;
+
+        &-active {
+          gap: 26px;
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      &-button {
+        width: 24px;
+        height: 20px;
+      }
+    }
+
+    &__line {
+      position: absolute;
+      width: 22px;
+      height: 1.5px;
+      background-color: #e9f1f3;
+      transition: 0.5s;
+    }
+
+    &-one {
+      top: 0;
+
+      &__active {
+        top: 8px;
+        transform: rotate(-50deg);
+      }
+    }
+
+    &-two {
+      top: 7px;
+
+      &__active {
+        top: 8px;
+        transform: rotate(50deg);
+      }
+    }
+
+    &-three {
+      top: 14px;
+      opacity: 1;
+
+      &__active {
+        top: 60px;
+        transform: rotate(-80deg);
+        opacity: 0;
+      }
+    }
+  }
+}

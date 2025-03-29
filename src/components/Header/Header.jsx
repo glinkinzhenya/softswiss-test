@@ -2,6 +2,7 @@ import './Header.scss';
 import Logo from '../../assets/logo.svg';
 import Cart from '../../assets/cart-icon.svg';
 import CartHover from '../../assets/cart-icon--hover.svg';
+import Burger from '../Burger/Burger';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -35,6 +36,9 @@ export const Header = () => {
               </button>
             </li>
           </ul>
+
+
+          <Burger/>
         </nav>
       </div>
     </header>

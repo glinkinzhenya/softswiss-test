@@ -4,8 +4,13 @@
 .header {
   background-color: $color-black;
 
+  @include respond-to-tablet {
+    position: fixed;
+    width: 100%;
+  }
+
   &__container {
-     max-width: 1148px;
+    max-width: 1148px;
     height: 80px;
     margin-left: auto;
     margin-right: auto;
@@ -13,18 +18,31 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+
+    @include respond-to-tablet {
+      height: 48px;
+    }
   }
 
   &__logo {
     width: 104px;
     height: 35px;
     display: block;
+
+    @include respond-to-desktop {
+      width: 71px;
+      height: 24px;
+    }
   }
 
   &__nav {
     &-list {
       display: flex;
       gap: 60px;
+
+      @include respond-to-tablet {
+        display: none;
+      }
     }
 
     &-link {
@@ -69,6 +87,7 @@
       height: 100%;
       object-fit: contain;
     }
+
     &-icon--hover {
       z-index: 0;
     }
