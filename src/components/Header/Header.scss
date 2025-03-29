@@ -22,6 +22,10 @@
     @include respond-to-tablet {
       height: 48px;
     }
+
+    @include respond-to-tablet {
+      padding: 0 20px;
+    }
   }
 
   &__logo {

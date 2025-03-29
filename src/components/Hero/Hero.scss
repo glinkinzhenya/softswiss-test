@@ -15,22 +15,44 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
   display: flex;
   justify-content: center;
 
-   @include respond-to-desktop {
-       height: 420px;
-    }
+  @include respond-to-desktop {
+    height: 420px;
+  }
+
+  @include respond-to-tablet {
+    height: 490px;
+  }
 
   &__container {
-     max-width: 1148px;
+    max-width: 1148px;
     width: 100%;
     padding: 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include respond-to-tablet {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    @include respond-to-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 44px;
+    }
   }
 
   &__image-container {
     @include respond-to-desktop {
       margin-right: -120px;
+    }
+
+    @include respond-to-tablet {
+      margin: -63px;
+      margin-right: 0px;
     }
   }
 
@@ -45,6 +67,13 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
       width: 70%;
     }
 
+    @include respond-to-tablet {
+      text-align: center;
+      width: 100%;
+      font-size: $font-size-2xl-mob;
+      margin-bottom: 17px;
+    }
+
     &--accent {
       color: $color-primary;
     }
@@ -57,6 +86,11 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
 
     @include respond-to-desktop {
       font-size: $font-size-lg-tab;
+    }
+
+    @include respond-to-tablet {
+      font-size: $font-size-sm-mob;
+      margin-bottom: 17px;
     }
 
     &--accent {

@@ -12,12 +12,21 @@
     margin: 55px 0;
   }
 
+  @include respond-to-tablet {
+    padding: 0 20px;
+    margin: 50px 0;
+  }
+
   &__title {
     font-weight: $font-w-semibold;
     font-size: $font-size-2xl;
 
     @include respond-to-desktop {
       font-size: $font-size-xl-tab;
+    }
+
+    @include respond-to-tablet {
+      font-size: $font-size-md-mob;
     }
   }
 
@@ -31,6 +40,11 @@
     @include respond-to-desktop {
       margin-top: 30px;
       gap: 30px;
+    }
+
+    @include respond-to-tablet {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 50px;
     }
   }
 
@@ -56,6 +70,12 @@
     @include respond-to-desktop {
       margin-top: 13px;
       font-size: $font-size-sm-tab;
+    }
+
+    @include respond-to-tablet {
+      margin-top: 20px;
+      font-size: $font-size-xs-mob;
+      max-height: 88px;
     }
   }
 
@@ -86,6 +106,10 @@
     @include respond-to-desktop {
       margin-top: 20px;
       font-size: $font-size-sm-tab;
+    }
+
+    @include respond-to-tablet {
+      font-size: $font-size-xs-mob;
     }
   }
 }

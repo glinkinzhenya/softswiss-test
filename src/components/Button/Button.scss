@@ -2,7 +2,9 @@
 @import '../../styles/mixins.scss';
 
 .btn {
-  width: 190px;
+  min-width: 190px;
+  padding: 0 20px;
+  width: fit-content;
   height: 54px;
   border-radius: 100px;
   background-color: $color-secondary;
@@ -19,13 +21,19 @@
     background: rgba($color-secondary, 0.6);
   }
 
+  @include respond-to-tablet {
+    min-width: 160px;
+    height: 33px;
+    font-size: $font-size-sm-mob;
+  }
+
   &--transparent {
     background-color: transparent;
     border: 2px solid $color-secondary;
     color: $color-secondary;
 
     @include respond-to-desktop {
-      width: 161px;
+      min-width: 161px;
       height: 33px;
       font-size: $font-size-sm-tab;
     }
