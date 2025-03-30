@@ -16,11 +16,11 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
   justify-content: center;
 
   @include respond-to-desktop {
-    height: 420px;
+    min-height: 420px;
   }
 
   @include respond-to-tablet {
-    height: 490px;
+    min-height: 490px;
   }
 
   &__container {
@@ -62,8 +62,13 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
     }
 
     @include respond-to-tablet {
-      margin: -40px;
+      margin-top: -90px;
       margin-right: 0px;
+
+      min-width: 300px;
+      min-height: 335px;
+      max-width: 300px;
+      max-height: 335px;
     }
   }
 
