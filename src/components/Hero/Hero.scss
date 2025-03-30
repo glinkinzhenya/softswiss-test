@@ -107,7 +107,7 @@ $bg-image-2x: '../../assets/bg-space-hero@2x.webp';
     @include respond-to-tablet {
       font-size: $font-size-sm-mob;
       margin-bottom: 17px;
-              text-align: center;
+      text-align: center;
     }
 
     &--accent {
